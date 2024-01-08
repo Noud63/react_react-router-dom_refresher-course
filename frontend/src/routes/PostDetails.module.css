@@ -1,7 +1,10 @@
 .details {
   padding: 1rem;
-  width: 30rem;
+  width: 100vw;
+  max-width: 320px;
+  height: 140px;
   text-align: left;
+  position: relative;
 }
 
 .author {
@@ -10,6 +13,7 @@
   color: #543280;
   margin: 0;
   text-transform: uppercase;
+  border-bottom: 1px solid #593884;
 }
 
 .text {
@@ -22,4 +26,12 @@
 
 .details a {
   text-decoration: none;
+}
+
+.created {
+  position: absolute;
+  bottom:0;
+  font-size: 12px;
+  font-style: italic;
+  color: #543280;
 }

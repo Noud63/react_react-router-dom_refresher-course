@@ -22,8 +22,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #a990fb;
-  color: #2a2630;
+  background-color: #af87fa;
+  color:#390699;
   border: none;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -34,4 +34,18 @@
 
 .button:hover {
   background-color: #8c6cf7;
+}
+
+@media only screen and (max-width: 450px) {
+  .logo {
+     font-size: 1.4rem;
+      gap: 0.5rem;
+  }
+
+  .button {
+        padding: 0.4rem 0.9rem;
+        font-size: 1rem;
+  }
+
+
 }

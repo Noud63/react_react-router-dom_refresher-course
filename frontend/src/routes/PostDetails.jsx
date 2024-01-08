@@ -26,6 +26,7 @@ function PostDetails() {
       <main className={classes.details}>
         <p className={classes.author}>{post.name}</p>
         <p className={classes.text}>{post.body}</p>
+        <p className={classes.created}>{post.created}</p>
       </main>
     </Modal>
   );
@@ -43,5 +44,4 @@ export const loader = async({params}) => {
     } catch (error) {
         console.log(error)
     }
-    return redirect(`/posts/${id}`)
 }

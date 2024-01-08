@@ -39,6 +39,7 @@ app.post("/posts", async (req, res) => {
   const newPost = {
     ...postData,
     id: Math.random().toString(),
+    created: new Date().toLocaleDateString() + " at:" + new Date().toLocaleTimeString()
   };
   const updatedPosts = [newPost, ...existingPosts];
   await storePosts(updatedPosts);
