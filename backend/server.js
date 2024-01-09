@@ -39,11 +39,22 @@ app.post("/posts", async (req, res) => {
   const newPost = {
     ...postData,
     id: Math.random().toString(),
-    created: new Date().toLocaleDateString() + " at:" + new Date().toLocaleTimeString()
+    created:
+      new Date().toLocaleDateString() +
+      " at:" +
+      new Date().toLocaleTimeString(),
   };
   const updatedPosts = [newPost, ...existingPosts];
   await storePosts(updatedPosts);
   res.status(201).json({ message: "Stored new post.", post: newPost });
 });
+
+app.get("posts/:name", async (req, res) => {
+  const posts = await getStoredPosts();
+  const filteredByName = posts.filter((post) => post.name === req.params.name);
+  console.log(filteredByName)
+  res.json({posts: filteredByName})
+})
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

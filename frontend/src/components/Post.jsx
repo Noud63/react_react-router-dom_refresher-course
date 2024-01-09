@@ -15,9 +15,9 @@ const Post = ({id, author, body, created}) => {
             <p className={styles.text}>{body}</p>
 
             <div className={styles.created}>
-              <p className={styles.createdAt}>
+              <span className={styles.createdAt}>
                 <b>Created:</b> {created}
-              </p>
+              </span>
             </div>
           </div>
         </Link>
